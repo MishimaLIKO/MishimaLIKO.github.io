@@ -10,7 +10,7 @@ permalinks:
   posts: /posts/:title/
 
 # googleAnalytics: UA-123-45
-# disqusShortname: nodejh
+disqusShortname: https-mishimaliko-github-io
 
 
 markup:
@@ -31,4 +31,4 @@ params:
   description: Liko's Blog
   # enableRSS: true
   enableComments: true
-  enableGoogleAnalytics: true
+  # enableGoogleAnalytics: true
