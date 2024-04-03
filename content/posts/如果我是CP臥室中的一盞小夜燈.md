@@ -1,3 +1,13 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMSTCBCHEG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GMSTCBCHEG');
+</script>
+
 +++
 title = '如果我是CP臥室中的一盞小夜燈'
 Author = 'liko'
@@ -28,12 +38,3 @@ tags = [
 
 做為CP臥室裡的一盞小夜燈，我也希望自己能像是小夜燈一樣溫暖又明亮地，如同看顧CP之間的情愛一般，看顧玟珒寫作的路途。是為記。
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMSTCBCHEG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GMSTCBCHEG');
-</script>
