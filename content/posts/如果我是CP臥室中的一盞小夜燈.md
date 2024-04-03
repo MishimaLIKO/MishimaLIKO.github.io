@@ -27,3 +27,13 @@ tags = [
 但我們卻能擁有玟珒的眼睛，能用神的觀點看盡這世上一切苦難與折磨，卻依然擁有專屬於人的哀働，那應該就是玟珒的小說想要帶給這個世界的吧。
 
 做為CP臥室裡的一盞小夜燈，我也希望自己能像是小夜燈一樣溫暖又明亮地，如同看顧CP之間的情愛一般，看顧玟珒寫作的路途。是為記。
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMSTCBCHEG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GMSTCBCHEG');
+</script>
