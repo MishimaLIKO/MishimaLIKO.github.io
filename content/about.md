@@ -1,13 +1,3 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMSTCBCHEG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GMSTCBCHEG');
-</script>
-
 +++
 title = 'LIKO＼李璐'
 date = 2024-04-02T22:11:52+08:00
