@@ -31,6 +31,6 @@ params:
   bio: Novelist
   description: Liko's Blog
   # enableRSS: true
-  enableComments: false
-  # enableGoogleAnalytics: true
+  enableComments: true
+  enableGoogleAnalytics: true
 
