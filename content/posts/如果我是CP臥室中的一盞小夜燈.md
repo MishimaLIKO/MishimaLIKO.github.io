@@ -1,5 +1,3 @@
-
-
 +++
 title = '如果我是CP臥室中的一盞小夜燈'
 Author = 'liko'
