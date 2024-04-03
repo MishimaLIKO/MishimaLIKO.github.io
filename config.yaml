@@ -9,7 +9,7 @@ hasCJKLanguage: true
 permalinks:
   posts: /posts/:title/
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-GMSTCBCHEG
 disqusShortname: https-mishimaliko-github-io
 
 
