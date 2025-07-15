@@ -4,7 +4,8 @@ baseURL: http://localhost
 languageCode: zh-tw
 title: LIKO＼李璐
 theme: mini
-paginate: 10
+pagination:
+  pagerSize: 10
 
 hasCJKLanguage: true
 permalinks:
