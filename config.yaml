@@ -1,34 +1,18 @@
-
-# baseURL: https://nodejh.github.io/hugo-theme-mini
 baseURL: https://MishimaLIKO.github.io/
-languageCode: zh-tw
 title: LIKO＼李璐
 theme: mini
 pagination:
   pagerSize: 10
 
+# 介面語言設為英文，以對應英文翻譯
+languageCode: en-us
 hasCJKLanguage: true
-permalinks:
-  posts: /posts/:title/
-
 googleAnalytics: G-GMSTCBCHEG
-#disqusShortname: https-mishimaliko-github-io
-
 
 markup:
   highlight:
     guessSyntax: true
     style: emacs
-
-
-# social:
-  # github: https://github.com/nodejh
-  # twitter: https://twitter.com/nodejh
-  # stackoverflow: https://stackoverflow.com/users/4518882/nodejh
-
-social:
-  github: https://github.com/MishimaLIKO
-  twitter: https://twitter.com/MishimaLIKO
 
 outputs:
   home:
@@ -36,16 +20,21 @@ outputs:
     - RSS
     - JSON
 
+# 社交連結
+social:
+  github: https://github.com/MishimaLIKO
+  twitter: https://twitter.com/MishimaLIKO
+
 params:
   author: liko
   bio: Novelist
   description: Liko's Blog
-  # enableRSS: true
   enableComments: true
   enableGoogleAnalytics: true
-
+  
+  # 導覽列連結（英文）
   links:
+    - name: About
+      path: /about
     - name: Search
       path: /search
-
-

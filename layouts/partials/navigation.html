@@ -1,0 +1,15 @@
+<nav class="navigation">
+	{{ if not .IsHome }}
+		<a href="{{ "/" | relURL }}"> <span class="arrow">←</span>Home</a>
+	{{ end }}
+	<a href="{{ "/posts" | relURL }}">Archive</a>
+	<a href="{{ "/about" | relURL }}">About</a>
+
+	{{ range $element := .Site.Params.Links }}
+		<a href="{{ $element.path | relURL }}">{{ $element.name }}</a>
+	{{ end }}
+
+	{{ if .Site.Params.enableRSS }}
+	  <a class="button" href="{{ .Site.RSSLink }}">Subscribe</a>
+	{{ end }}
+</nav>
