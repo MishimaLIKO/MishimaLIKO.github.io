@@ -45,7 +45,7 @@ params:
   enableGoogleAnalytics: true
 
   links:
-    - name: 搜尋
+    - name: Search
       path: /search
 
 

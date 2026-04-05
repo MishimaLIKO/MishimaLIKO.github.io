@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div id="search-page">
     <div class="search-header">
-        <input type="text" id="search-input" placeholder="輸入關鍵字搜尋..." autocomplete="off">
+        <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
     </div>
     <div id="search-results"></div>
 </div>
@@ -11,7 +11,7 @@
     const searchInput = document.getElementById('search-input');
     const resultsContainer = document.getElementById('search-results');
 
-    // 1. 獲取搜尋索引
+    // 1. Fetch search index
     fetch('/index.json')
         .then(response => response.json())
         .then(data => {
@@ -21,7 +21,7 @@
                 includeMatches: true
             });
 
-            // 2. 監聽輸入事件
+            // 2. Listen for input
             searchInput.addEventListener('input', () => {
                 const query = searchInput.value.trim();
                 if (query.length === 0) {
@@ -29,16 +29,16 @@
                     return;
                 }
 
-                // 3. 執行搜尋
+                // 3. Execute search
                 const results = fuse.search(query);
                 displayResults(results);
             });
         });
 
-    // 4. 顯示結果
+    // 4. Display results
     function displayResults(results) {
         if (results.length === 0) {
-            resultsContainer.innerHTML = '<p class="no-results">找不到符合的搜尋結果</p>';
+            resultsContainer.innerHTML = '<p class="no-results">No matching results found</p>';
             return;
         }
 
