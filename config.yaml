@@ -1,6 +1,6 @@
 
 # baseURL: https://nodejh.github.io/hugo-theme-mini
-baseURL: http://localhost
+baseURL: https://MishimaLIKO.github.io/
 languageCode: zh-tw
 title: LIKO＼李璐
 theme: mini
@@ -26,6 +26,15 @@ markup:
   # twitter: https://twitter.com/nodejh
   # stackoverflow: https://stackoverflow.com/users/4518882/nodejh
 
+social:
+  github: https://github.com/MishimaLIKO
+  twitter: https://twitter.com/MishimaLIKO
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 params:
   author: liko
@@ -34,4 +43,9 @@ params:
   # enableRSS: true
   enableComments: true
   enableGoogleAnalytics: true
+
+  links:
+    - name: 搜尋
+      path: /search
+
 

@@ -1,0 +1,95 @@
+{{ define "main" }}
+<div id="search-page">
+    <div class="search-header">
+        <input type="text" id="search-input" placeholder="輸入關鍵字搜尋..." autocomplete="off">
+    </div>
+    <div id="search-results"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+<script>
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('search-results');
+
+    // 1. 獲取搜尋索引
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            const fuse = new Fuse(data, {
+                keys: ['title', 'content', 'summary'],
+                threshold: 0.3,
+                includeMatches: true
+            });
+
+            // 2. 監聽輸入事件
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.trim();
+                if (query.length === 0) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                // 3. 執行搜尋
+                const results = fuse.search(query);
+                displayResults(results);
+            });
+        });
+
+    // 4. 顯示結果
+    function displayResults(results) {
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<p class="no-results">找不到符合的搜尋結果</p>';
+            return;
+        }
+
+        resultsContainer.innerHTML = results.map(result => `
+            <article class="search-result-item">
+                <h3><a href="${result.item.relpermalink}">${result.item.title}</a></h3>
+                <div class="search-summary">${result.item.summary}</div>
+            </article>
+        `).join('');
+    }
+</script>
+
+<style>
+    #search-page {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    #search-input {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+    .search-result-item {
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    .search-result-item h3 {
+        margin: 0 0 10px 0;
+    }
+    .search-result-item a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .search-result-item a:hover {
+        text-decoration: underline;
+    }
+    .search-summary {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .no-results {
+        color: #999;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+{{ end }}
